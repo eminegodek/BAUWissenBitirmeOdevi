@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PXU4RN0nalo=",
+  "dgSpecHash": "ZTfQSHtpWMY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\son aşama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\BilgeHotel.csproj",
+  "projectFilePath": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\BilgeHotel\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\BilgeHotel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emine Gödek\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Emine Gödek\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

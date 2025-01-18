@@ -1,96 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|c:\\users\\emine g\u00F6dek\\onedrive\\masa\u00FCst\u00FC\\son a\u015Fama\\bauwissentemmuz2024_eminegodek_bitirme\\bauwissentemmuz2024_eminegodek_bitirme\\bilgehotel\\bilgehotel\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|solutionrelative:bilgehotel\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|c:\\users\\emine g\u00F6dek\\onedrive\\masa\u00FCst\u00FC\\son a\u015Fama\\bauwissentemmuz2024_eminegodek_bitirme\\bauwissentemmuz2024_eminegodek_bitirme\\bilgehotel\\bilgehotel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|solutionrelative:bilgehotel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|c:\\users\\emine g\u00F6dek\\onedrive\\masa\u00FCst\u00FC\\son a\u015Fama\\bauwissentemmuz2024_eminegodek_bitirme\\bauwissentemmuz2024_eminegodek_bitirme\\bilgehotel\\bilgehotel\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|solutionrelative:bilgehotel\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|c:\\users\\emine g\u00F6dek\\onedrive\\masa\u00FCst\u00FC\\son a\u015Fama\\bauwissentemmuz2024_eminegodek_bitirme\\bauwissentemmuz2024_eminegodek_bitirme\\bilgehotel\\bilgehotel\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73F8DBD7-EC2F-4A68-9429-280A4AEE8DCF}|BilgeHotel\\BilgeHotel.csproj|solutionrelative:bilgehotel\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\BilgeHotel\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Views\\Manager\\Index.cshtml",
-              "RelativeDocumentMoniker": "BilgeHotel\\Views\\Manager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Views\\Manager\\Index.cshtml",
-              "RelativeToolTip": "BilgeHotel\\Views\\Manager\\Index.cshtml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAJcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T20:52:15.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "BilgeHotel\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "BilgeHotel\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAiwIMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T20:45:04.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "BilgeHotel\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "BilgeHotel\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T20:43:19.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MessagesController.cs",
-              "DocumentMoniker": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Controllers\\MessagesController.cs",
-              "RelativeDocumentMoniker": "BilgeHotel\\Controllers\\MessagesController.cs",
-              "ToolTip": "C:\\Users\\Emine G\u00F6dek\\OneDrive\\Masa\u00FCst\u00FC\\son a\u015Fama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\Controllers\\MessagesController.cs",
-              "RelativeToolTip": "BilgeHotel\\Controllers\\MessagesController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAwwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T20:43:02.517Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

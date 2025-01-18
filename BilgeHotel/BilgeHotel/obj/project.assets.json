@@ -4196,11 +4196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\son aşama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\BilgeHotel.csproj",
+      "projectUniqueName": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\BilgeHotel\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\BilgeHotel.csproj",
       "projectName": "BilgeHotel",
-      "projectPath": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\son aşama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\BilgeHotel.csproj",
+      "projectPath": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\BilgeHotel\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\BilgeHotel.csproj",
       "packagesPath": "C:\\Users\\Emine Gödek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\son aşama\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\obj\\",
+      "outputPath": "C:\\Users\\Emine Gödek\\OneDrive\\Masaüstü\\BilgeHotel\\BauWissenTemmuz2024_EmineGodek_Bitirme\\BilgeHotel\\BilgeHotel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emine Gödek\\AppData\\Roaming\\NuGet\\NuGet.Config",

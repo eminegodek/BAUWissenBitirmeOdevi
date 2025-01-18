@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BilgeHotel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c7c2048e87a0ea0095d5bed81d5c188f296c043")]
 [assembly: System.Reflection.AssemblyProductAttribute("BilgeHotel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BilgeHotel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

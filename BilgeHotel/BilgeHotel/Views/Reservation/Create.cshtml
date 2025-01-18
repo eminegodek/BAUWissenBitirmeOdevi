@@ -1,0 +1,173 @@
+﻿
+@model IEnumerable<BilgeHotel.Models.RoomViewModel>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yapınız</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(/image/reservation.jpg);
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; 
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 40px;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            width: 100%;
+            max-width: 400px; 
+            margin: 50px auto; 
+        }
+
+        .form-control {
+            margin-bottom: 15px; 
+        }
+
+        .btn-primary {
+            width: 100%; 
+            transition: background-color 0.3s ease; 
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3; 
+            }
+
+        h2 {
+            text-align: center; 
+            margin-bottom: 30px; 
+            font-size: 24px; 
+        }
+    </style>
+
+</head>
+   <body>
+       <br />
+    <h2>Oda Rezervasyonu</h2>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <form asp-action="Create" method="post">
+        <div class="room-type-buttons">
+            @foreach (var roomGroup in Model)
+            {
+               
+                <button type="button" class="btn btn-secondary room-type-btn" data-room-type="@roomGroup.RoomType">
+                    @roomGroup.RoomType
+                </button>
+            }
+        </div>
+
+        <div class="room-details">
+            @foreach (var roomGroup in Model)
+            {
+                <div class="room-group" id="@roomGroup.RoomType" style="display:none;">
+                    <h4>@roomGroup.RoomType - Kat: @roomGroup.Floor</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Oda Tipi</th>
+                                <th>Kat</th>
+                                <th>Kapasite</th>
+                                <th>Gecelik Fiyat</th>
+                                <th>Seç</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var room in roomGroup.Rooms)
+                            {
+                                <tr>
+                                    <td>@room.RoomType</td>
+                                    <td>@room.Floor</td>
+                                    <td>@room.Capacity</td>
+                                    <td>@room.PricePerNight.ToString("C")</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success select-button"
+                                                data-room-id="@room.Id">
+                                            Seç
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Details" asp-controller="Room" asp-route-id="@room.Id" class="btn btn-info">Detaylar</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+        <input type="hidden" name="roomId" id="roomId" value="" />
+
+        <div>
+            <label for="identificationNumber">Kimlik Numarası:</label>
+            <input type="text" id="identificationNumber" name="identificationNumber" required maxlength="11" minlength="11" />
+        </div>
+
+        <div>
+            <label for="startDate">Başlangıç Tarihi:</label>
+            <input type="date" id="startDate" name="startDate" required />
+        </div>
+
+        <div>
+            <label for="endDate">Bitiş Tarihi:</label>
+            <input type="date" id="endDate" name="endDate" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Rezervasyon Kaydet</button>
+    </form>
+   </body>
+
+
+
+
+<script>
+    // Oda tipi butonlarına tıklandığında içerik açma ve kapama işlemi
+    const roomTypeButtons = document.querySelectorAll('.room-type-btn');
+
+    roomTypeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const roomType = this.getAttribute('data-room-type');
+            const roomGroup = document.getElementById(roomType);
+
+            // Oda tipi içeriği göster ya da gizle
+            if (roomGroup.style.display === "none") {
+                roomGroup.style.display = "block";
+            } else {
+                roomGroup.style.display = "none";
+            }
+        });
+    });
+
+    // Seçilen odanın ID'sini hidden input'a ekle
+    const selectButtons = document.querySelectorAll('.select-button');
+    selectButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            document.getElementById('roomId').value = this.getAttribute('data-room-id');
+            // Seçilen butonu stil olarak güncelle
+            this.classList.toggle('btn-success');
+            this.classList.toggle('btn-warning');
+            this.innerText = this.classList.contains('btn-warning') ? 'Seçildi' : 'Seç';
+        });
+    });
+</script>

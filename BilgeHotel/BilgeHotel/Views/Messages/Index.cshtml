@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BilgeHotel.Models.ContactMessage>
+
+<h2>Gelen Mesajlar</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ad-Soyad</th>
+            <th>Email</th>
+            <th>Konu</th>
+            <th>Mesaj</th>
+            <th>Gönderilme Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.FullName</td>
+                <td>@message.Email</td>
+                <td>@message.Subject</td>
+                <td>@message.Message</td>
+                <td>@message.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

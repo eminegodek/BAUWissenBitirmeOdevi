@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BilgeHotel.Models.Reservation>
+
+<h2>Rezervasyon Listesi</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Rezervasyon ID</th>
+            <th>Oda ID</th>
+            <th>Oda</th>
+            <th>Müşteri</th>
+            <th>Başlangıç Tarihi</th>
+            <th>Bitiş Tarihi</th>
+            <th>Fiyat</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.Id</td>
+                <td>@reservation.RoomId</td>
+                <td>@reservation.Room.RoomType</td>
+                <td>@reservation.Customer.FullName</td>
+                <td>@reservation.StartDate.ToShortDateString()</td>
+                <td>@reservation.EndDate.ToShortDateString()</td>
+                <td>@reservation.Price.ToString("C")</td>
+                <td>@reservation.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>

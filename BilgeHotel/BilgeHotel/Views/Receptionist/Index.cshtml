@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Resepsiyon Paneli</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url(/image/manager-panel.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menü Barı (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Resepsiyon Paneli</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Login/Index" id="logout-link">Çıkış</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 p-0" id="sidebar">
+                <div class="sidebar bg-dark text-white">
+                    <ul class="list-unstyled">
+                        <li><a href="#" id="home-link-sidebar" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="/Reservation/Index" id="employee-link-sidebar" class="text-white">Rezervasyonlar</a></li>
+                        <li><a href="/Room/Index" id="rooms-link-sidebar" class="text-white">Odalar</a></li>
+                        <li><a href="/Customer/Index" id="recervation-link-sidebar" class="text-white">Müşteriler</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 p-4" id="main-content">
+                <div id="content-placeholder"
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById('content-placeholder').innerHTML = `
+                    <br />
+            <h3>Bilge Hotel Resepsiyon Paneline Hoş geldiniz!</h3>
+               <br />
+                <div class="alert alert-info">
+                            <strong>Bilgi:</strong> Yönetim paneline dair yardım almak için lütfen destek bölümüyle iletişime geçin.<a href="#" target="_blank"><br /> eminegodekk@gmail.com</a>
+                        </div>
+                         <p>Bu panelde otel yönetimi ile ilgili işlemleri gerçekleştirebilirsiniz.</p>
+                <ul>
+                  <li>Yeni rezervasyonları kontrol et ve düzenle.</li>
+                    <li>Oda durumu güncelle ve oda detaylarını incele.</li>
+                        <li>Çalışan bilgilerini düzenle.</li>
+                    <li>Müşteri bilgilerini listele,yeni müşteri ekle.</li>
+                </ul>
+                    <br />
+                <!-- Butonlar -->
+                <div class="button-container">
+                        <button class="btn btn-primary" id="btn-reservations" data-href="/Reservation/Index">Rezervasyonlar</button>
+                    <button class="btn btn-success" id="btn-rooms" data-href="/Room/Index">Odalar</button>
+                        <button class="btn btn-danger" id="btn-logout" data-href="/Customer/Index">Müşteriler</button>
+                </div>
+                <!-- Tablo -->
+                    <div class="table-container">
+                    <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>Kategoriler:</th>
+                                        <th>İşlemler:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Rezervasyonlar</td>
+                                      <td><a href="/Reservation/Create" target="_blank">Rezervasyon OLuştur</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Odalar</td>
+                                        <td><a href="/Room/Create" target="_blank">Oda OLuştur</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Müşteriler</td>
+                                        <td><a href="/Customer/Create" target="_blank">Müşteri Oluştur</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        `;
+                document.querySelectorAll('.button-container button').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const href = button.getAttribute('data-href');
+                    });
+                });
+                };
+
+                document.getElementById('home-link-sidebar').addEventListener('click', function () {
+                    document.getElementById('content-placeholder').innerHTML = `
+                             <br />
+                    <h3>Bilge Hotel Resepsiyon Paneline Hoş geldiniz!</h3>
+                       <br />
+                        <div class="alert alert-info">
+                                    <strong>Bilgi:</strong> Yönetim paneline dair yardım almak için lütfen destek bölümüyle iletişime geçin.<a href="#" target="_blank"><br /> eminegodekk@gmail.com</a>
+                                </div>
+                                 <p>Bu panelde otel yönetimi ile ilgili işlemleri gerçekleştirebilirsiniz.</p>
+                        <ul>
+                          <li>Yeni rezervasyonları kontrol et ve düzenle.</li>
+                            <li>Oda durumu güncelle ve oda detaylarını incele.</li>
+                                <li>Çalışan bilgilerini düzenle.</li>
+                            <li>Müşteri bilgilerini listele,yeni müşteri ekle.</li>
+                        </ul>
+                            <br />
+                        <!-- Butonlar -->
+                        <div class="button-container">
+                                <button class="btn btn-primary" id="btn-reservations" data-href="/Reservation/Index">Rezervasyonlar</button>
+                            <button class="btn btn-success" id="btn-rooms" data-href="/Room/Index">Odalar</button>
+                                <button class="btn btn-danger" id="btn-logout" data-href="/Customer/Index">Müşteriler</button>
+                        </div>
+                        <!-- Tablo -->
+                            <div class="table-container">
+                            <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                            <th>Kategoriler:</th>
+                                                <th>İşlemler:</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Rezervasyonlar</td>
+                                              <td><a href="/Reservation/Create" target="_blank">Rezervasyon OLuştur</a></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Odalar</td>
+                                                <td><a href="/Room/Create" target="_blank">Oda OLuştur</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Müşteriler</td>
+                                                <td><a href="/Customer/Create" target="_blank">Müşteri Oluştur</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                     
+                    `;
+
+                document.querySelectorAll('.button-container button').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const href = button.getAttribute('data-href');
+                    });
+                });
+                });
+    </script>
+
+</body>
+</html>

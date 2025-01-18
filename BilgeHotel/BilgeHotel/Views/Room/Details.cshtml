@@ -1,0 +1,61 @@
+﻿@model BilgeHotel.Models.Room
+
+<h2>Oda Detayları</h2>
+
+<table class="table">
+    <tr>
+        <th>Oda Numarası</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Oda Tipi</th>
+        <td>@Model.RoomType</td>
+    </tr>
+    <tr>
+        <th>Kapasite</th>
+        <td>@Model.Capacity</td>
+    </tr>
+    <tr>
+        <th>Kat</th>
+        <td>@Model.Floor</td>
+    </tr>
+    <tr>
+        <th>Balkon</th>
+        <td>@(Model.HasBalcony ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Minibar</th>
+        <td>@(Model.HasMinibar ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Klima</th>
+        <td>@(Model.HasAirConditioning ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>TV</th>
+        <td>@(Model.HasTV ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Saç Kurutma Makinesi</th>
+        <td>@(Model.HasHairdryer ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>WiFi</th>
+        <td>@(Model.HasWiFi ? "Evet" : "Hayır")</td>
+    </tr>
+    <tr>
+        <th>Gecelik Fiyat</th>
+        <td>@Model.PricePerNight.ToString("C")</td>
+    </tr>
+    <tr>
+        <th>Durum</th>
+        <td>@(Model.IsAvailable ? "Müsait" : "Meşgul")</td>
+    </tr>
+</table>
+
+@{
+    // Kullanıcının rolünü kontrol etme
+    string returnUrl = (User.IsInRole("Customer")) ? Url.Action("Room", "Home") : Url.Action("Index", "Room");
+}
+
+<a href="@returnUrl" class="btn btn-primary">Geri</a>

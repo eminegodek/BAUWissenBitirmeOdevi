@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BilgeHotel.Models.RoomViewModel>
+
+<h2>Oda Rezervasyonu</h2>
+
+<form asp-action="Create" method="post">
+    <table>
+        <thead>
+            <tr class="table-header">
+                <th>Oda Tipi</th>
+                <th>Kat</th>
+                <th>Kapasite</th>
+                <th>Gecelik Fiyat</th>
+                <th>Seç</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var roomGroup in Model)
+            {
+                <tr>
+                    <td colspan="5"><strong>@roomGroup.RoomType - Kat: @roomGroup.Floor</strong></td>
+                </tr>
+                @foreach (var room in roomGroup.Rooms)
+                {
+                    <tr>
+                        <td></td>
+                        <td>@room.Floor</td>
+                        <td>@room.Capacity</td>
+                        <td>@room.PricePerNight.ToString("C")</td>
+                        <td class="radio-container">
+                            <input type="radio" name="roomId" value="@room.Id" required />
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <div>
+        <label for="identificationNumber">Kimlik Numarası:</label>
+        <input type="text" id="identificationNumber" name="identificationNumber" required maxlength="11" minlength="11" />
+    </div>
+
+    <div>
+        <label for="startDate">Başlangıç Tarihi:</label>
+        <input type="date" id="startDate" name="startDate" required />
+    </div>
+
+    <div>
+        <label for="endDate">Bitiş Tarihi:</label>
+        <input type="date" id="endDate" name="endDate" required />
+    </div>
+
+    <button type="submit">Rezervasyon Kaydet</button>
+</form>

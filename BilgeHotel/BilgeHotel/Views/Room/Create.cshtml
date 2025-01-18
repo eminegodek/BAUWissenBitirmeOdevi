@@ -1,0 +1,52 @@
+﻿@model RoomViewModel
+
+<h2>Oda Ekle</h2>
+<form asp-action="Create" method="post">
+    <label for="RoomType">Oda Tipi:</label>
+    <select id="RoomType" name="RoomType" class="form-control" onchange="updateRoomDetails()">
+        <option value="Tek Kişilik">Tek Kişilik</option>
+        <option value="Üç Kişilik">Üç Kişilik</option>
+        <option value="İki Kişilik">İki Kişilik</option>
+        <option value="Aile Odası">Aile Odası</option>
+        <option value="Kral Dairesi">Kral Dairesi</option>
+    </select>
+
+    <label for="Capacity">Kapasite:</label>
+    <input id="Capacity" name="Capacity" class="form-control" readonly />
+
+    <label for="PricePerNight">Gecelik Fiyat:</label>
+    <input id="PricePerNight" name="PricePerNight" class="form-control" readonly />
+
+    <button type="submit" class="btn btn-primary mt-3">Ekle</button>
+</form>
+
+<script>
+    function updateRoomDetails() {
+        const roomType = document.getElementById("RoomType").value;
+        const capacity = document.getElementById("Capacity");
+        const price = document.getElementById("PricePerNight");
+
+        switch (roomType) {
+            case "Tek Kişilik":
+                capacity.value = 1;
+                price.value = 150;
+                break;
+            case "Üç Kişilik":
+                capacity.value = 3;
+                price.value = 300;
+                break;
+            case "İki Kişilik":
+                capacity.value = 2;
+                price.value = 250;
+                break;
+            case "Aile Odası":
+                capacity.value = 3;
+                price.value = 450;
+                break;
+            case "Kral Dairesi":
+                capacity.value = 4;
+                price.value = 1000;
+                break;
+        }
+    }
+</script>

@@ -1,0 +1,50 @@
+﻿@model List<Room>
+
+<h2>Oda Listesi</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Oda Tipi</th>
+            <th>Kapasite</th>
+            <th>Kat</th>
+            <th>Fiyat</th>
+            <th>Durum</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+                <tr>
+                    <td>@room.Id</td>
+                    <td>@room.RoomType</td>
+                    <td>@room.Capacity</td>
+                    <td>@room.Floor</td>
+                    <td>@room.PricePerNight.ToString("C")</td>
+                    <td>
+                    @if (room.IsAvailable)
+                    {
+                                <span class="badge bg-success">Müsait</span>
+                    }
+                    else
+                    {
+                                <span class="badge bg-danger">Meşgul</span>
+                    }
+                    </td>
+                    <td>
+                         <a class="btn btn-info" href="@Url.Action("Details", "Room", new { id = room.Id })">
+                             Detaylar
+                        </a>
+                        <a class="btn btn-warning" href="@Url.Action("ToggleAvailability", "Room", new { id = room.Id })">
+                            Durumu Değiştir
+                        </a>
+                        <a class="btn btn-primary" href="#">Düzenle</a>
+                        <a class="btn btn-danger" href="#">Sil</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Room")" class="btn btn-success mt-3">Yeni Oda Ekle</a>

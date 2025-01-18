@@ -1,0 +1,9 @@
+﻿@model BilgeHotel.Models.Room
+
+<h2>Oda Detayları</h2>
+<h2>Rezervasyon Onayı</h2>
+
+<p>Rezervasyonunuz başarıyla tamamlandı.</p>
+<p><strong>Toplam Fiyat:</strong> @ViewBag.Price.ToString("C")</p>
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-success">Ana Sayfaya Dön</a>
